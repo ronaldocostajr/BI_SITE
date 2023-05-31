@@ -20,16 +20,20 @@ git add .
 git commit -m "texto referente ao commit"
 git push -f origin main
 
+credencial COORDENADORIA DE DADOS
+----------------------------------
+ronaldo.costa
+du2rnhavigantxy6srnegpmvizu24y3hofubeuizzhatw7uz6bpq
 
 credenciais devops AVIVA
 --------------------------
 ronaldo.costa
-ptm6mlbdlwrbfnxfnzurg3huga7emowmeyeonf5b3t6npvd5lt3a
+rs2zofa7a6p7m6kity7vjtecjh2ugoxzqqlsow7om2xuiy2kcllq
 
 credencial RIO QUENTE
 --------------------------
 ronaldo.costa
-v3krkhpgty33nqd6iel5w5ifctcjzipfvtmahdln2f5be4433qwq
+b3k5rnehpakkq5cuuohk746irojwceedtjm7utdrcdu4vcpielaa
 
 credencial SAUIPE
 --------------------------
