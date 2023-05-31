@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "SADM"
+AuthUserFile "/home2/bisuport/.htpasswds/portal.bisuporte.com.br/SADM/passwd"
+require valid-user
