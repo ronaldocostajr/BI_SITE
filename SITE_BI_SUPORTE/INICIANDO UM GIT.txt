@@ -1,0 +1,37 @@
+echo "# BI_SITE" >> README.md
+git init
+git add README.md
+git config --global user.name "Ronaldo Costa"
+git config --global user.email "rjunior@aviva.com.br"
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ronaldocostajr/BI_SITE.git
+git push -u origin main
+
+
+ao iniciar o dia
+-----------------------------
+git pull origin main
+
+para comitar as alterações
+----------------------------
+git status ( a partir desta visualização podemos reverter as alterações )
+git add .
+git commit -m "texto referente ao commit"
+git push -f origin main
+
+
+credenciais devops AVIVA
+--------------------------
+ronaldo.costa
+ptm6mlbdlwrbfnxfnzurg3huga7emowmeyeonf5b3t6npvd5lt3a
+
+credencial RIO QUENTE
+--------------------------
+ronaldo.costa
+v3krkhpgty33nqd6iel5w5ifctcjzipfvtmahdln2f5be4433qwq
+
+credencial SAUIPE
+--------------------------
+ronaldo.costa
+ucnxtspvasmdz65lb7u6bqqyrfzeywbfrbt4nu65uhohhpcpkacq
