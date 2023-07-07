@@ -1,0 +1,1193 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+    </style><link rel='stylesheet' href='style.css'>
+<title>NOMECLATURA</title>
+</head>
+<body>
+<table border=0 style='background-color: rgb(239,239,239); width:100%' ><tr><td align=center><img src='imagens/aviva.jpg' width='150px'></td></tr></table><left>
+<html lang="pt-BR">
+		
+<table border=2 width=100%>
+<thead>
+	<tr class="table-header">
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Tipo de Objeto</span></th>
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Descrição</span></th>
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Padrão Estabelecido</span></th>
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Exemplos</span></th>
+	</tr>
+</thead>
+  <tbody>
+			<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: left;"><span style="white"><strong>Bitmap Index</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Tipo de índice que pode ser utilizado para otimizar consultas que utilizam como filtro de dados, colunas que possuem <strong>baixa cardinalidade</strong><em> (</em>colunas que possuem pouca variação de valores nas linhas de uma tabela).</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content">IB_+[NOME DA TABELA]+_+[NOME DA COLUNA]</div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_USUARIO</p><p><span style="white">Coluna:</span> NU_CPF</p><p><span style="white">Bitmap Index:</span> IB_USUARIO_NUCPF</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Check Constraint (CK)</span></strong></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Definição de restrições de para uma coluna/tabela.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1) CK para uma coluna de uma tabela:</strong></span></p><p>CK_+[NOME DA TABELA]</p><p>TABELA]+_+[NOME DA COLUNA]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_CADASTRO</p><p><span style="white">Coluna:</span> ST_FUNCAO</p><p><span style="white">Constraint:</span> CK_CADASTRO_STFUNCAO</p><p><span style="white">Tabela:</span> TB_UF</p><p><span style="white">Coluna:</span> CO_IBGE</p><p><span style="white">Constraint:</span> CK_UF_COIBGE</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Cluster</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Grupo de tabelas que compartilham os mesmos blocos de dados, desde que compartilhem colunas em comum e são usadas frequentemente em conjunto.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1) </strong><strong>Formação com 2 tabelas:</strong></span></p><p>TC_+[NOME DA TABELA 1] +_+ [NOME DA TABELA 2]</p><p> </p><p><span style="white"><strong>2) </strong><strong>Formação com mas de 2 tabelas:</strong></span></p><p>TC__+[NOME DA TABELA 1] +_ ... _+ [NOME DA TABELA n]</p><p>Quando o nome com a regra acima não ficar legível utilizar a seguinte regra:</p><p>TC_+[ NOME DO CLUSTER], neste caso o nome do cluster deve ser significativo para o negócio ao qual pertence</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela 1:</span> TB_GRUPO</p><p><span style="white">Tabela 2:</span> TB_SUBGRUPO</p><p><span style="white">Cluster: </span>TC_GRUPOSUBGRUPO</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Cluster Index</span></strong></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Índice para cluster.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>IC_+[NOME DO CLUSTER]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content">IC_CIDADEESTADOCOUF</div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Column</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Coluna de uma entidade negocial que é representada em uma tabela, sendo que cada coluna corresponde a uma coluna na tabela.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>Ver tabela 3</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>Ver tabela 3</strong></span></p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Database Link (Oracle) ou Linked Server (SQL Server)</span></strong></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Objeto criado em um schema que possibilita o acesso para este schema a objetos de outro servidor de banco de dados.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><strong><span style="white">1) Brasília:</span> </strong></p><p>{NOME DO BANCO]</p><p><span style="white"><strong>2) </strong><strong>Rio:</strong></span></p><p>LK_[instância sistema destino]_[sigla sistema destino/entidade externa origem]_ [flag de localização]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>DFPO1</p><p> </p><p> </p><p>LK_RJPO1</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Foreign Key</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Restrição de integridade que determina que uma coluna ou um conjunto de colunas que possuem valores em outras tabelas. Relativa a uma referência ou a um relacionamento.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1)</strong><strong> Existe um relacionamento entre as duas tabelas:</strong></span></p><p>FK_+[NOME DA TABELA PAI]+_+ [NOME DA TABELA FILHO]</p><p><span style="white"><strong>2) </strong><strong>Existe mais de um relacionamento entre as duas tabelas:</strong></span></p><p>FK_+[NOME DA TABELA PAI]+_+ [NOME DA TABELA FILHO]+[NOME  FK] , neste caso o nome da FK deve ser significativo para o negócio ao qual pertence</p><p><span style="white"><strong>3) Formação quando existir relacionamento com uma chave candidata da tabela pai (UK)</strong></span></p><p>FK_+[NOME DA TABELA PAI]+[NOME SIGNIFICATIVO DO CAMPO NO PAI]+_ +[NOME DA TABELA FILHO]+[NOME SIGNIFICATIVO DO CAMPO NO FILHO]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela Pai:</span> TB_UF</p><p><span style="white">Tabela Filho:</span> TB_MUNICIPIO</p><p><span style="white">Constraint:</span> FK_UF_MUNICIPIO</p><p> </p><p><span style="white">Tabela Pai:</span> TB_UF</p><p><span style="white">Tabela Filho:</span> TB_MUNICIPIO</p><p><span style="white">Constraint 1:</span> FK_UF_SERVIDORUFNASCIMENTO</p><p><span style="white">Constraint 2: </span>FK_UF_SERVIDORUFENDERECO</p><p> </p><p><span style="white">Tabela Pai:</span> TB_ESTABELECIMENTO</p><p><span style="white">Campo na Tabela Pai:</span> NU_CGC</p><p><span style="white">Tabela Filho:</span> TB_MANTENEDORA</p><p><span style="white">Campo na tabela Filha:</span> NU_CNPJ</p><p><span style="white">Constraint: </span>FK_ESTABELECIMCGC_MANTENEDCNPJ</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Function</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>São rotinas de processamento que retornam valores.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>FC_+[NOME DA FUNÇÃO]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>FC_CALCULA_DV</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Index</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Estruturas opcionais associadas a tabelas e ‘clusters’ que permitem que as consultas SQL sejam executadas com melhor performance.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1) Formação simples</strong></span></p><p>IN_+[NOME DA TABELA]+_+[NOME DA COLUNA]</p><p><span style="white"><strong>2) Formação com mais de um coluna na formação do índice</strong></span></p><p>IN_+[NOME DA TABELA]+_+[NOME INDEX], neste caso o nome do index deve ser significativo para o negócio ao qual pertence</p><p><span style="white"><strong>3) Formação quando o índice for de um coluna que é FK na tabela com uma coluna</strong></span></p><p>IN_+[FK]+[NOME DA TABELA]+_+[NOME DA COLUNA]</p><p><span style="white"><strong>4) Formação quando o índice for de uma coluna que é FK na tabela de mais de uma coluna</strong></span></p><p>IN_+[FK]+[NOME DA TABELA]+_+[NOME FK]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_USUARIO</p><p><span style="white">Coluna:</span> NU_CPF</p><p><span style="white">Index: </span>IN_USUARIO_NUCPF</p><p> </p><p><span style="white">Tabela:</span> TB_LOCALIDADE</p><p><span style="white">Colunas:</span> CO_MUNICIPIO_IBGE, CO_UF_IBGE</p><p><span style="white">Index:</span> IN_LOCALID_COMUNICIBGECOUFIBGE ou IN_LOCAL_UFMUNICIPIO</p><p> </p><p><span style="white">Tabela:</span> TB_MUNICIPIO</p><p><span style="white">Coluna:</span> CO_UF_IBGE</p><p><span style="white">Index:</span> IN_FKMUNICIPIO_COUFIBGE</p><p> </p><p><span style="white">Tabela:</span> RL_ESTAB_EQUIPE_PROF</p><p><span style="white">FK:</span> FK_EQUIPE_PROF_EQUIPE</p><p><span style="white">Coluna 1:</span> CO_MUNICIPIO</p><p><span style="white">Coluna 2: </span>CO_AREA </p><p><span style="white">Coluna 3: </span>SEQ_EQUIPE<strong>  </strong>  </p><p><span style="white">Index: </span>IN_FKRLESTEQUPRF_ FKEQUPRFEQU</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Instância de Banco de Dados</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Nome de instância de banco de dados.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1) </strong></span><strong><span style="white">Brasília:</span> </strong></p><p>UF + [Finalidade da Instância] + SGBD +  [Sequencial], onde:</p><p>UF = Unidade da Federação com dois caracteres (DF);</p><p><span style="white">Finalidade da Instância:</span></p><p>P – Produção</p><p>T – Treinamento</p><p>D – Desenvolvimento</p><p>H – Homologação</p><p><span style="white">SGBD:</span></p><p>O – Oracle</p><p>P – PostgreSql</p><p>M – MySql</p><p>S – SqlServer</p><p><span style="white">Sequencial:</span> número de 1 a 9, indicando o sequencial daquela instância.</p><p><span style="white">Observações:</span></p><p>- Caso a instância não siga o padrão de nomenclatura, acrescentar F antes do SGBD.</p><p>- Para instâncias de Data Warehouse, os nomes deverão ser acrescidos da letra W antes do SGBD.</p><p><span style="white"><strong>2) </strong><strong>Rio:</strong></span></p><p>[Finalidade da Instância] + UF + [Sequencial], onde:</p><p><span style="white">Finalidade da Instância:</span></p><p>BD – Produção</p><p>DS – Desenvolvimento</p><p>HO – Homologação</p><p>UF = Unidade da Federação com dois caracteres (RJ);</p><p>Sequencial = número de 01 a 99, indicando o sequencial daquela instância.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>DFPO1</p><p>DFDO1</p><p>DFPO3</p><p>DFPOW1 (Produção Oracle de DW)</p><p>DFFO1 (fora do padrão)</p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p> </p><p>BDRJ01</p><p>DSRJ01</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Intermedia Index</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Índice para pesquisa textual.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>ITM_+[NOME DA TABELA]+_+[NOME DA COLUNA]</p><p><span style="white"><strong>Obs: O nome da tabela deve perder o prefixo TB e os separadores </strong><strong>“_”</strong><strong>.</strong></span></p><p><span style="white"><strong>O nome da constraint deve conter apenas 25 caracteres, pois é uma limitação do sgbd Oracle.</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_TEXTO</p><p><span style="white">Coluna:</span> DS_CONTEUDO</p><p><span style="white">Intermédia Index:</span> ITM_TEXTO_DSCONTEUDO</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Materyalized View</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>É uma representação de uma ou de várias tabelas armazenadas em banco, mas com armazenamento próprio.</p><p>A MV também poderá ser utilizada como forma de replicação de tabelas em instâncias distintas.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1) </strong></span> Views de uma ou mais tabelas</p><p>MV_+[NOME DA VIEW]</p><p><strong><span style="white">2)</span></strong> Views  para replicação de tabelas deve seguir a regra de nome de tabela</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>MV_SERVIDOR_ATIVO</p><p> </p><p>TB_UNIDADE_UORG</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Package</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Grupo de procedures, funções, comandos sql e variáveis, que executa diretamente no banco de dados.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content">PKG_+[NOME DO PACKAGE]</div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content">PKG_CADASTRO_BASE</div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Package Body</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Grupamento de comandos PL/SQL e especificações disponíveis para todos os objetos públicos listados na Package.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>PKG_+[NOME DO PACKAGE ]+_+[BODY]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>PKG_CADASTRO_GERAL</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Partition Index</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Índice de partição.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>PI+_+[NOME DA TABELA] +_+[NOME DA COLUNA] +_+[RANGE]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>PI_ AUTORIZA_DTANOCMPT_1992</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Primary Key</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Identifica de forma única uma linha de uma tabela.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>PK_+[NOME DA TABELA]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_MUNICIPIO</p><p><span style="white">Primary Key:</span> PK_MUNICIPIO</p><p><span style="white">Tabela:</span> TB_TIPO_ENTIDADE</p><p><span style="white">Primary Key:</span> PK_TIPOENTIDADE</p><p><span style="white">Tabela:</span> RL_USUARIO_UF</p><p><span style="white">Primary Key:</span> PK_RLUSUARIO_UF</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Schema</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Conjunto de objetos de propriedade de um usuário (OWNER).</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>DB+[SIGLA DO SISTEMA]</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Sequence</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Objeto do banco utilizado para gerar números inteiros únicos.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><strong><span style="white">1)Vinculada a uma tabela específica: SQ_+[NOME DA TABELA]+_+[NOME DA COLUNA]</span></strong></p><p><strong><span style="white">2)Não Vinculada a uma tabela específica: SQ_+[NOME DA SEQUENCE], neste caso o nome da  sequence  deve ser significativo para o negócio ao qual pertence</span></strong></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_CADASTRO_SERVIDOR</p><p><span style="white">Sequence:</span></p><p>SQ_CADASTROSERVIDO_COSEQPOSICA</p><p><span style="white">Sequence não vinculada à tabela:</span></p><p>SQ_GERA_CODIGO</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Stored Procedure</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Conjunto de procedimentos armazenados no banco.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>SP_+[NOME DA PROCEDURE]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>SP_ESTRUTURA</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Table</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Armazenamento dos dados da entidade negocial que representa.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>Ver tabela 2</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>Ver tabela 2</strong></span></p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Table Partition</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Particionamento de tabelas com grande volume de dados, que divide fisicamente tabelas, sem a necessidade de reescrever o código fonte de sua aplicação, pois logicamente a tabela particionada é como uma tabela normal.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>PD+_+[NOME DA TABELA] +_+[NOME DA COLUNA]+_+[RANGE]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>PD_AUTORIZA_DTANOCMPT_1992</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Tablespace</span></strong></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Unidade de armazenamento lógico de um banco de dados que consiste em um ou mais arquivos denominados arquivos de dados (datafiles), que são estruturas físicas compatíveis com o sistema operacional onde está o banco de dados. Os dados do banco de dados são armazenados coletivamente nos datafiles que constituem cada tablespace.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1)</strong> <strong>Padrão de Brasília:</strong></span></p><p>- TD_+[NOME DO SCHEMA] (tablespace de dados)</p><p>- TI_ +[NOME DO SCHEMA] (tablesspace de índice)</p><p>- TT_+[NOME DO SCHEMA] (tablespace temporária)</p><p>- TR_+[NOME DO SCHEMA] (Tablespace Segmento de Rollback)</p><p><span style="white"><strong>2) </strong><strong>Padrão Rio:</strong></span></p><p>- TD_+[NOME DO SCHEMA] ]_+[N° DA TABLESPACE]</p><p>(tablespace de dados)</p><p>- TI_ +[NOME DO SCHEMA] ]_+[N° DA TABLESPACE] (tablesspace de índice)</p><p>- TT_+[NOME DO SCHEMA] ]_+[N° DA TABLESPACE] (tablespace temporária)</p><p>- TR_+[NOME DO SCHEMA] ]_+[N° DA TABLESPACE] (Tablespace Segmento de Rollback)</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>TD_DBGERAL</p><p> </p><p>TI_DBGERAL</p><p> </p><p>TT_TMPSEG</p><p> </p><p>TR_RBSSEG1</p><p> </p><p>TD_CNES_01</p><p> </p><p>TI_CNES_01</p><p> </p><p>TT_CNES_01</p><p> </p><p>TR_CNES_01</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Trigger After de Auditoria</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Procedimento a ser disparado após uma exclusão / atualização / inclusão de registro na tabela associada para inclusão de registro na tabela de auditoria.</p><p>Essa nomenclatura também deve ser utilizada quando há mais de um tipo de operação disparando a trigger (para cada linha do comando).</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1) </strong><strong>Trigger de Auditoria – Padrão GAAD</strong></span></p><p><strong>- </strong>TRA_ [NOME DA TABELA<strong>], </strong>onde o nome da tabela é com o prefixo da tabela origem, mas sem o caracter separador _ entre as palavras. Ultrapassando o tamanho máximo de caracteres para nome (30), a última palavra será truncada no 30º caracter.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_PESSOA</p><p><span style="white">Trigger:</span> TRA_PESSOA</p><p><span style="white">Tabela:</span> RL_DEMANDA_TAREFA</p><p><span style="white">Trigger:</span> TRA_ RLDEMANDATAREFA</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Trigger Before / After Delete </strong></span><span style="white"><strong>(Row / Statement)</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Procedimento a ser disparado antes ou após a exclusão de um registro da tabela associada (para cada linha do comando).</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1) </strong><strong>Trigger Before Delete</strong></span></p><p>TBD_+[NOME DA TABELA]</p><p><span style="white"><strong>2) </strong><strong>Trigger After Delete</strong></span></p><p>TAD_+[NOME DA TABELA]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_FORNECEDOR_TELEFONE</p><p><span style="white">Trigger:</span></p><p>TBD_ FORNECEDORTELEFONE</p><p><span style="white">Tabela:</span> RL_FORNECEDOR_ENDERECO</p><p><span style="white">Trigger:</span></p><p>TAD_RLFORNECEDOR ENDERECO</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Trigger Before / After Insert </span></strong><strong><span style="white">(Row / Statement)</span></strong></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Procedimento a ser disparado antes ou após a inserção de um registro na tabela associada (para cada linha do comando).</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1) </strong><strong>Trigger Before Insert</strong></span></p><p>TBI_+[NOME DA TABELA]</p><p><span style="white"><strong>2) </strong><strong>Trigger After Insert</strong></span></p><p>TAI_+[NOME DA TABELA]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_FORNECEDOR_TELEFONE</p><p><span style="white">Trigger:</span></p><p>TBI_ FORNECEDORTELEFONE</p><p><span style="white">Tabela:</span> RL_FORNECEDOR_ENDERECO</p><p><span style="white">Trigger:</span></p><p>TAI_RLFORNECEDOR ENDERECO</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Trigger Before / After Insert or Update or Delete (Row / Statement)</span></strong></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Procedimento a ser disparado antes ou após qualquer uma das três operações de registro (insert, delete, update) na tabela associada.</p><p>Essa nomenclatura também deve ser utilizada quando há mais de um tipo de operação disparando a trigger (para cada linha do comando).</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1)  </strong><strong>Trigger Before All</strong></span></p><p>TBA_+[NOME DA TABELA]</p><p><span style="white"><strong>2)  </strong><strong>Trigger After All</strong></span></p><p>TAA_+[NOME DA TABELA]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_FORNECEDOR_TELEFONE</p><p><span style="white">Trigger:</span></p><p>TBA_ FORNECEDORTELEFONE</p><p><span style="white">Tabela:</span> RL_FORNECEDOR_ENDERECO</p><p><span style="white">Triggers:</span></p><p>TAA_RLFORNECEDOR ENDERECO</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Trigger Before / After Update (Row / Statement)</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Procedimento a ser disparado antes ou após a atualização de um registro na tabela associada(para cada linha do comando).</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1) </strong><strong>Trigger Before Update</strong></span></p><p>TBU_+[NOME DA TABELA]</p><p><span style="white"><strong>2) </strong><strong>Trigger After Update</strong></span></p><p>TAU_+[NOME DA TABELA]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_FORNECEDOR_TELEFONE</p><p><span style="white">Trigger:</span></p><p>TBU_ FORNECEDORTELEFONE</p><p><span style="white">Tabela:</span> RL_FORNECEDOR_ENDERECO</p><p><span style="white">Triggers:</span></p><p>TAU_RLFORNECEDOR ENDERECO</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Trigger Instead Of</span></strong></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Procedimento a ser disparado após a execução de um comando (para todas as linhas afetadas pelo comando).</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>TIO_+[NOME DA TABELA ou VIEW]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_FORNECEDOR_TELEFONE</p><p><span style="white">Trigger:</span></p><p>TIO_ FORNECEDORTELEFONE</p><p><span style="white">Tabela:</span> RL_FORNECEDOR_ENDERECO</p><p><span style="white">Triggers:</span></p><p>TIO_RLFORNECEDOR ENDERECO</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Unique Key</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Identifica de forma única uma linha de uma tabela, mas não é a primary key. Normalmente é utilizada para indetificar a chave negocial da tabela nos casos em que a PK é uma coluna controlada por sequence.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white"><strong>1) </strong><strong>Formação simples</strong></span></p><p>UK_+[NOME DA TABELA]+_+[NOME DA COLUNA]</p><p><span style="white"><strong>2) </strong><strong>Formação com mais de um coluna na UK</strong></span></p><p>UK_+[NOME DA TABELA]+_+[NOME UK] , neste caso o nome da UK deve ser significativo para o negócio ao qual pertence</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p><span style="white">Tabela:</span> TB_SERVIDOR</p><p><span style="white">Campo:</span> NU_CPF</p><p><span style="white">Unique Key:</span> UK_SERVIDOR_CPF</p><p><span style="white">Tabela:</span> TB_TELEFONE</p><p><span style="white">Campos:</span> TP_TELEFONE, NU_DDD e NU_TELEFONE</p><p><span style="white">Unique Key:</span> UK_TELEFONE_IDENTTELEFONE</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Usuário de Database Link </span></strong><strong><span style="white">(padrão geral)</span></strong></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Nomenclatura para links entre esquemas/bancos para os sistemas do DATASUS</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>LK_[NOME DO SCHEMA]_[UF de localização]</p><p>Obs1: O nome do schema deve perder o prefixo DB e o caractere (“_”).</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>O <strong>sistema PORTAL</strong> que utiliza o schema dbportal no DF, deseja acessar  objetos que estão no banco de dados RJPO1.</p><p> </p><p>Nome do link: RJPO1</p><p>Nome do usuário: LK_PORTAL_DF</p><p> </p><p>Onde:</p><p>RJPO1– Banco de Dados que sofre o acesso (destino).</p><p>PORTAL – Nome do SCHEMA sem o prefixo DB_ (origem).</p><p>DF – Sigla da UF de localização do schema. (origem).</p></div></div>
+					</td>
+			</tr>
+					<tr>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>View</strong></span></p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>Representação lógica de uma ou de várias tabelas armazenadas em banco de dados, mas sem armazenamento próprio.</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>VW_+[NOME DA VIEW]</p></div></div>
+					</td>
+					<td colspan="" rowspan="" class="" id="">
+						<div class="td-content-wrapper"><div class="td-content"><p>VW_SERVIDOR_ATIVO</p></div></div>
+					</td>
+			</tr>
+</tbody>
+</table>
+					
+<h3> Quais os prefixos para cada categoria de tabela?</h3>					
+
+<table border=2 class="tablesorter eael-data-table center" id="eael-data-table-75996af">
+	<thead>
+	<tr class="table-header">
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Categoria da Tabela</span></th>
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Descrição</span></th>
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Padrão Estabelecido</span></th>
+	</tr>
+	</thead>
+	<tbody>
+<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Tabela de sistema</strong></span></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Tabela utilizada para armazenar dados de aplicação.</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>TB_+[NOME DA TABELA]</p></div></div>
+		</td>
+</tr>
+		<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Tabela de Relacionamento (Associativa)</strong></span></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Tabela que resolve relacionamentos “N para N” entre duas tabelas.</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>RL_+[NOME DA TABELA1]+ _+[NOME DA TABELA2]</p></div></div>
+		</td>
+</tr>
+		<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Tabela Log de Operações</span></strong></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Tabela utilizada para armazenar os dados das operações de usuários realizadas no esquema. Exemplo de operações: insert, update, delete.</p><p>Este tipo de tabela somente pode ser utilizado para log´s alimentados cuja responsabilidade é da Equipe de Desenvolvimento de Sistemas.</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>TL_+[NOME DA TABELA]</p></div></div>
+		</td>
+</tr>
+		<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Tabela Auditoria</strong></span></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Tabela utilizada para armazenar os dados das operações de usuários realizadas no esquema do padrão da GAAD. </p><p>Para estas tabelas a alimentação dos dados será feito por uma trigger e os usuários possuirão somente priviliégio de S E L E C T (uso exclusivo da GAAD).</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>AU_+[NOME DA TABELA ORIGEM,] onde o nome da tabela é com o prefixo da tabela origem, mas sem o caracter separador _ entre as palavras. Ultrapassando o tamanho máximo de caracteres para nome (30), a última palavra será truncada no 30º caracter.</p></div></div>
+		</td>
+</tr>
+		<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Tabela Temporária</span></strong></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Tabela utilizada em rotinas dos sistemas para armazenamento temporário de dados.</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content">TM_+[NOME DA TABELA]</div></div>
+		</td>
+</tr>
+		<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Tabela de Histórico</strong></span></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Tabela utilizada para armazenar os dados históricos de uma determinada funcionalidade, podendo ter vida útil para os dados.</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>TH_+[NOME DA TABELA]</p></div></div>
+		</td>
+</tr>
+		<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><strong><span style="white">Tabela Auxiliar</span></strong></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Qualquer tabela utilizada para auxiliar em um procedimento esporádico. Deve ser excluída após a execução do procedimento.</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>TA_+[NOME DA TABELA]</p></div></div>
+		</td>
+</tr>
+		<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Tabela de Backup</strong></span></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Tabela criada com a finalidade de armazenar um backup de uma tabela.</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>BK_+[YYYYMMDD]+ _ + +[NOME DA TABELA]</p></div></div>
+		</td>
+</tr>
+		<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Tabela de Relacionamento Ternário (Associativa)</strong></span></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Tabela que resolve relacionamentos “N para N”, envolvendo três tabelas ou mais.</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>RT_+[NOME DA TABELA DE RELACIONAMENTO</p><p>neste caso o nome da TABELA DE RELACIONAMENTO deve ser significativo para o negócio ao qual pertence</p></div></div>
+		</td>
+</tr>
+		<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Tabela Dimensão (Data Mart / Data Warehouse)</strong></span></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Armazena as descrições textuais das dimensões de negócio (região, UF, etc). Deve ser utilizada somente para Data Mart ou Data Warehouse.</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>TD_+[NOME DA TABELA]</p></div></div>
+		</td>
+</tr>
+		<tr>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Tabela Fato</strong></span></p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>Coleção de itens de dados relacionados, consistindo de métricas e contexto de dados (são armazenados os indicadores de desempenho do negócio e tem como característica principal a presença de dados altamente redundantes para se obter um melhor desempenho). Deve ser utilizada somente para Data Mart ou Data Warehouse.</p></div></div>
+		</td>
+		<td colspan="" rowspan="" class="" id="">
+			<div class="td-content-wrapper"><div class="td-content"><p>TF_+[NOME DO SISTEMA]</p></div></div>
+		</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Quais os prefixos para cada categoria de coluna?</h3>
+					
+<table border=2 class="tablesorter eael-data-table center" id="eael-data-table-26096b9">
+	<thead>
+	<tr class="table-header">
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Categoria de Coluna</span></th>
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Utilização</span></th>
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Composição</span></th>
+	</tr>
+	</thead>
+  	<tbody>
+	<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Código</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expresse um código, cujo conteúdo não é obtido de uma sequence. Também é utilizada essa regra quando a coluna é uma FK, isto é, coluna herdada de outra tabela, e cuja PK é uma coluna CO_+SEQ_+[NOME DO ATRIBUTO] .</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>CO_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Código com Sequence</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expresse um  código obtido de uma sequence.</p><p>O datatype deve ser de natureza numérica ou SERIAL (para o Postgres).</p><p>A descrição de colunas desse tipo deve ser:</p><p>- Para sequence específica para a tabela: <em>“Representa a chave primária sequencial da tabela, que é controlada pela sequence [NomeSequence] do banco de dados específica para a tabela. ”</em></p><p>- Para sequence NÃO específica para a tabela: <em>“Representa a chave primária sequencial da tabela, que é controlada sequence [NomeSequence] do banco de dados.”</em></p><p>- Para coluna com datatype SERIAL no Postgres: <em>“Representa a chave primária sequencial da tabela, que é controlada pelo banco de dados através do dadatype desta coluna SERIAL.”</em></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>CO_+SEQ_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Coluna de Controle de Tabela de Auditoria</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna que é incluída na geração da tabela de auditoria de colunas utilizadas para armazenamento de informações de controle que permitem o rastreamento da operação na tabela origem.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>AU_+[ NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Coordenada Geográfica</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expressa um conjunto de coordenadas geográficas. Utilizado para plotar mapas e fazer referenciamento geográfico.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>CG_[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Data</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expresse uma data do calendário civil.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>DT_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Descrição</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo é livre e em forma discursiva independente do tipo e tamanho utilizado (texto).</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>DS_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Hora</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expresse uma hora ou horário.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>HR_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Imagem</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expresse uma binária como imagens, vídeo, audio, bem como qualquer outro tipo de multimidia ou dados em geral.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>IM_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Nome</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo é de natureza alfanumérica e expressa um nome por extenso sendo composta de palavras, abreviaturas ou ambas.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>NO_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Número</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo é representado por algarismos, não significando, necessariamente, que o tipo do campo tenha que ser possuir datatype de natureza numérica.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>NU_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Quantidade</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expressa um quantitativo.</p><p>O datatype deve ser de natureza numérica.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>QT_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Sigla</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expressa uma Sigla representativa de algo.</p><p>O datatype deve ser de natureza alfanumérica.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>SG_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Situação ou Status</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expressa a situação ou o status do registro ou de algum atributo.</p><p>Deve ter uma lista de valores atrelada, que pode ser uma tabela de domínio ou uma check constraint.</p><p>Obs.: Esta categoria de registro deve expressar um código, seja numérico ou alfanumérico, nunca um conteúdo por extenso/ discursivo.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>ST_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Taxa</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expressa indica uma taxa.</p><p>O datatype deve ser de natureza numérica.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>TX_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Tipo</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expressa o tipo do registro ou de algum outro atributo. Deve ter uma lista de valores atrelada, que pode ser uma tabela de domínio ou uma check constraint.</p><p>Obs.: Esta categoria de registro deve expressar um código, seja numérico ou alfanumérico, nunca um conteúdo por extenso / discursivo.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>TP_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Valor</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Coluna cujo conteúdo expressa um valor numérico.</p><p>O datatype deve ser de natureza numérica.</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>VL_+[NOME DA COLUNA]</p></div></div>
+			</td>
+	</tr>
+	</tbody>
+</table>
+					
+<h3>Quais são as classes de dados?</h3>
+
+<table border=2 class="tablesorter eael-data-table center" id="eael-data-table-e045fcf">
+	<thead>
+	<tr class="table-header">
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Classe</span></th>
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Nome Descritivo do Atributo</span></th>
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Datatype / Tamanho</span></th>
+	<th class="" id="" colspan="">
+	<span class="data-table-header-text">Observações</span></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Caixa Postal</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Número da Caixa Postal</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>VARCHAR2(12)</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Deve ser preenchida somente com dígitos de 0 à 9.</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>CEP</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número do CEP</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>VARCHAR2(8)</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Deve estar cadastrado na tabela DBGERAL.TB_CEP.</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Ano</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Número do Ano</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>VARCHAR2(4)</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Deve possuir somente dígitos de 0 à 9.</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Mês</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Número do Mês</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(2)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Deve possuir somente os valores 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11 e 12.</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="5" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Número de Documento Identificador de Pessoas</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número do CNPJ</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(14)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve estar cadastrado nas tabelas do schema DBPESSOA TB_PESSOA e  TB_PESSOA_JURIDICA.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número do CPF</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(11)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve estar cadastrado nas tabelas do schema DBPESSOA TB_PESSOA e  TB_PESSOA_FISICA.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Número do Cartão Nacional de Saúde (CNS)</p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(15)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9 e estar de acordo com o CADSUS.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número do Passaporte</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">N/A</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">N/A</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número do NIS, PIS, PASEP</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(11)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Gênero (Sexo)</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Código do Gênero</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(1)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Deve possuir somente os códigos e referenciado pelo DBGERAL.TB_SEXO:</p><p>- M=Masculino;</p><p>- F=Feminino;</p><p>- I=Ignorado;</p><p>- X=Inválido (Para uso pelo CADSUS).</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="2" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Documento de Identidade de Pessoa Física</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Documento de Identidade</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">N/A</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">A formatação e colunas deve ser livre, mas sempre deverá conter as informações nº do documento, órgão emissor, UF emissora, data de emissão do documento.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Código Tipo do Documento</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(3</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve estar cadastrado em DBGERAL.TB_TIPO_DOCUMENTO .CO_TIPO_DOCUMENTO</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="3" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Título de Eleitor</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número do Título de Eleitor</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(12)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Deve possuir somente dígitos de 0 à 9.</p><p>O número da inscrição eleitoral será composto por 12 algarismos, sendo que os oito primeiros serão números sequenciais, os dois seguintes serão indicadores da UF e os dois últimos servirão como dígitos verificadores do número sequencial e do número da UF, respectivamente.</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número da Zona Eleitoral do Título de Eleitor</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(4)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número da Seção Eleitoral do Título de Eleitor</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(4)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="4" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Carteira de Trabalho e Previdência Social</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número da Carteira de Trabalho e Previdência Social</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(7)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número de Série da CTPS</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(4)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Sigla da UF de emissão da CTPS</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(2)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve estar cadastrada da tabela DBGERAL.TB_UF.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Data da emissão da CTPS</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">DATE</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">N/A</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="5" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Telefone</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número do Telefone</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(15)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número do DDD</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(2)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número do DDI</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(3)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número do Ramal</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(4)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Tipo do Telefone</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(2)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve estar cadastrado na tabela DBGERAL.TB_TIPO_TELEFONE.CO_TIPO_TELEFONE.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Situação Ativo / Inativo</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Campo de situação, com prefixo ST, cujo domínio é Ativo ou Inativo.</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(1)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Deve ter preenchimento obrigatório e possuir somente os códigos:</p><p>A – Ativo</p><p>I - Inativo</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Situação Sim / Não</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Campo de situação, com prefixo ST, cujo domínio é Sim ou Não.</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(1)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Deve ter preenchimento obrigatório e possuir somente os códigos:</p><p>S – Sim</p><p>N - Não</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="2" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Internet</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Descrição do endereço de E–mail</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(60)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">N/A</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Descrição do endereço da URL  (<strong>Localizador Padrão de Recursos - Uniform Resource Locator).</strong></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(100)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">N/A</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="3" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p style="text-align: center;"><span style="white"><strong>Dados Bancários de Conta Corrente</strong></span></p></div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Código do Banco</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(3)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Deve possuir somente dígitos de 0 à 9 e estar cadastrado na tabela DBGERAL.TB_BANCO.</div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Código da Agência com o dígito verificador</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(6)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content"><p>Deve estar cadastrado na tabela DBGERAL.TB_AGENCIA_BANCARIA.</p><p>O formato é o seguinte:</p><p>0NNNND, onde NNNN é o número da agência e D é o dígito verificador da agência.</p></div></div>
+			</td>
+	</tr>
+			<tr>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">Número da Conta corrente sem o dígito verificador</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">VARCHAR2(20)</div></div>
+			</td>
+			<td colspan="" rowspan="" class="" id="">
+				<div class="td-content-wrapper"><div class="td-content">O último é o dígito digito verificador do nº da conta bancária.</div></div>
+			</td>
+	</tr>
+	</tbody>
+</table>
+</body>
+</html>

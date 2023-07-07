@@ -1,0 +1,8 @@
+*Diagrama das tabelas e objetos de banco de dados.
+- Para melhor entendimento vários layouts foram criados.
+- Utilize o mouse para navegação entre as tabelas e seus metadados.
+- Duplo-Clik no cabeçalho da tabela para ver as columas.
+
+Coordenadoria de Dados de TI.
+Gerente Geral:        Christian Rocha
+Coordenador de Dados: Ronaldo Costa
